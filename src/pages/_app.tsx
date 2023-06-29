@@ -3,14 +3,16 @@ import { Plus_Jakarta_Sans } from 'next/font/google';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
 const pjs = Plus_Jakarta_Sans({
-  subsets: ['latin']
+  subsets: ['latin'],
+  weight: ["400", "500", "600", "700"],
 })
 
 const GlobalStyle = createGlobalStyle`
-  body {
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-font-smoothing: antiliasing;
   }
 `
 

@@ -57,7 +57,6 @@ export const Text = styled.div`
     }
 
     p span {
-
         font-weight: 700;
     }
 `;

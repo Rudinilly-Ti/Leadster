@@ -2,7 +2,7 @@ import logo from '@/assets/logo.png';
 import Image from "next/image";
 import { Container } from "./styles";
 
-export function Header() {
+export default function Header() {
     return (
         <Container>
             <Image src={logo} alt="logo" width={150}/>

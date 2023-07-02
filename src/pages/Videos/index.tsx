@@ -1,4 +1,5 @@
 import NormalButton from '@/components/NormalButton';
+import Pagination from '@/components/Pagination';
 import VideoCard from '@/components/VideoCard';
 import { ButtonsContainer, Container, FilterContainer, FilterSelect, InteractionContainer, VideoContainer } from './styles';
 
@@ -35,6 +36,11 @@ export default function Videos() {
                 <VideoCard />
                 <VideoCard />
             </VideoContainer>
+            <Pagination 
+                totalPages={4}
+                activePage={2}
+                onChange={() => {}}
+            />
         </Container>
     )
 }

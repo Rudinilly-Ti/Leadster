@@ -24,18 +24,24 @@ export const Container = styled.div`
             border-radius: 15px 15px 0 0;
 
             z-index: 2;
+
+            display: none;
         }
     }
 
     .title {
         width: 250px;
+        height: 40px;
+
+        font-weight: 700;
         font-size: 14px;
-        font-weight: 600;
         display: flex;
+        
         flex: 1;
         justify-content: center;
         align-items: center;
 
+        color: #333;
     }
     
 
@@ -46,10 +52,17 @@ export const Container = styled.div`
     
         .image {
             .cover {
-                opacity: 0.5;
                 transition: all 0.2s ease-in-out;
-                background-color: ${props => props.theme.colors.primary};
+                background-color: ${({theme}) =>   theme.colors.primary}80;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }   
+        }
+
+        .title {
+            color: ${({theme}) =>   theme.colors.primary};
         }
     }
 `;

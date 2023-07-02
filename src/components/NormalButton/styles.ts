@@ -5,17 +5,17 @@ export const Button = styled.button<{active?: boolean}>`
     padding: 0 15px;
     height: 30px;
 
-    background-color: ${props => props.active ? props.theme.colors.primary : 'transparent'};
-    border: 1px solid  ${props => props.active ? props.theme.colors.primary : '#222'};
+    background-color: ${({active, theme}) => active ? theme.colors.primary : 'transparent'};
+    border: 1px solid  ${({active, theme}) => active ? theme.colors.primary : '#222'};
     border-radius: 15px;
 
     font-weight: 500;
     font-size: 14px;
-    color : ${props => props.active ? '#fff' : '#222'};
+    color : ${({active}) => active ? '#fff' : '#222'};
 
     &:hover, &:focus {
-        border: 1px solid ${props => props.theme.colors.primary};
-        color: ${props => props.active ? '' : props.theme.colors.primary};
+        border: 1px solid ${({theme}) => theme.colors.primary};
+        color: ${({active, theme}) => active ? '' : theme.colors.primary};
         cursor: pointer;
     }
 `;
